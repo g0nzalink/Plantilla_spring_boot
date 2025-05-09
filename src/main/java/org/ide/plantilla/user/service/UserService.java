@@ -25,6 +25,10 @@ public class UserService implements UserDetailsService {
     private JwtService jwtService;
 
     public void register(String username, String password) {
+        if (userRepository.existsByUsername(username)) {
+            throw new RuntimeException("El usuario ya existe");
+        }
+
         User user = new User();
         user.setUsername(username);
         user.setPassword(encoder.encode(password));
