@@ -30,7 +30,7 @@ public class AuthController {
     @PostMapping("/register")
     @PreAuthorize("hasAnyRole('ADMIN')")
     public ResponseEntity<?> register(@RequestBody AuthRequest request) {
-        userService.register(request.getUsername(), request.getPassword());
+        userService.register(request.getUsername(), request.getPassword(), request.getRole());
         return ResponseEntity.ok("Usuario registrado");
     }
 

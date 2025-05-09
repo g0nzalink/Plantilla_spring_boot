@@ -25,7 +25,7 @@ public class UserService implements UserDetailsService {
     @Autowired
     private JwtService jwtService;
 
-    public void register(String username, String password) {
+    public void register(String username, String password, Role role) {
         if (userRepository.existsByUsername(username)) {
             throw new RuntimeException("El usuario ya existe");
         }
@@ -33,7 +33,7 @@ public class UserService implements UserDetailsService {
         User user = new User();
         user.setUsername(username);
         user.setPassword(encoder.encode(password));
-        user.setRole(Role.USER);
+        user.setRole(role);
         userRepository.save(user);
     }
 

@@ -16,8 +16,8 @@ public class UserInitializer {
         return args -> {
             if (userRepository.findByUsername("admin").isEmpty()) {
                 User admin = new User();
-                admin.setUsername("admin");
-                admin.setPassword(encoder.encode("admin123"));
+                admin.setUsername("admin"); //Nombre del usuario administrador
+                admin.setPassword(encoder.encode("admin123")); //Contrasenia del usuario administrador
                 admin.setRole(Role.ADMIN);
                 userRepository.save(admin);
                 System.out.println("✔ Usuario ADMIN creado por defecto.");
