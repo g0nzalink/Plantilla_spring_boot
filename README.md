@@ -1,6 +1,6 @@
 ## **Plantilla Spring Boot**
 Esta plantilla es para Spring Boot y en general para ahorrar toda la implementación de Spring Security.
-Si ven que algo falta agradecería que pudieran implementarlo pero haciendo pull request para que no sea toda una sopa rara. El main solo está para el Readme, la plantilla está en el branch master.
+Si ven que algo falta agradecería que pudieran implementarlo pero haciendo pull request para que no sea toda una sopa rara. Por favor si quieren hacer un cambio hagan pull request al branch "cambios" para tenerlos a parte y proximamente hacer el merge.
 
 ## **IMPORTANTE**
 Esta es una plantilla general, si la descargas puedes borrar la carpeta de "__otras_entidades" ya que es un ejemplo y de ahí crear tus entidades con sus respectivos controller's, service's, dto's, model's y repository's.
